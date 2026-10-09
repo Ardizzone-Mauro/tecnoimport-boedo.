@@ -1,0 +1,272 @@
+[
+  {
+    "id": "1",
+    "title": "Samsung Galaxy S24 256GB",
+    "description": "Smartphone premium con pantalla AMOLED de 6.2 pulgadas, cámara de alta resolución y rendimiento fluido para multitarea.",
+    "price": 1250000,
+    "category": "celulares",
+    "stock": 12,
+    "pictureUrl": "/img/Samsung Galaxy S24 256GB.webp"
+  },
+  {
+    "id": "2",
+    "title": "iPhone 15 128GB",
+    "description": "Celular con pantalla Super Retina XDR, potente procesador y cámaras avanzadas para fotos y videos de gran calidad.",
+    "price": 1450000,
+    "category": "celulares",
+    "stock": 10,
+    "pictureUrl": "/img/iPhone 15 128GB.webp"
+  },
+  {
+    "id": "3",
+    "title": "Xiaomi Redmi Note 13 Pro",
+    "description": "Equipo con pantalla AMOLED de 120 Hz, cámara principal de alta resolución y batería de larga duración.",
+    "price": 520000,
+    "category": "celulares",
+    "stock": 18,
+    "pictureUrl": "/img/Xiaomi Redmi Note 13 Pro.webp"
+  },
+  {
+    "id": "4",
+    "title": "Motorola Edge 50 Fusion",
+    "description": "Smartphone 5G de diseño delgado, pantalla curva y batería preparada para acompañarte todo el día.",
+    "price": 680000,
+    "category": "celulares",
+    "stock": 14,
+    "pictureUrl": "/img/Motorola Edge 50 Fusion.webp"
+  },
+  {
+    "id": "5",
+    "title": "MacBook Air M3 13 pulgadas",
+    "description": "Notebook ultraliviana con chip M3, pantalla Liquid Retina y excelente autonomía para trabajo, estudio y creación.",
+    "price": 2350000,
+    "category": "laptops",
+    "stock": 7,
+    "pictureUrl": "/img/MacBook Air M3 13 pulgadas.webp"
+  },
+  {
+    "id": "6",
+    "title": "Lenovo IdeaPad Slim 3",
+    "description": "Notebook versátil con procesador Intel Core i5, 16 GB de RAM y SSD rápido para tareas diarias y productividad.",
+    "price": 980000,
+    "category": "laptops",
+    "stock": 11,
+    "pictureUrl": "/img/Lenovo IdeaPad Slim 3.webp"
+  },
+  {
+    "id": "7",
+    "title": "ASUS TUF Gaming F15",
+    "description": "Notebook gamer con pantalla de alta frecuencia, gráfica dedicada y sistema de refrigeración pensado para sesiones exigentes.",
+    "price": 1850000,
+    "category": "laptops",
+    "stock": 6,
+    "pictureUrl": "/img/ASUS TUF Gaming F15.webp"
+  },
+  {
+    "id": "8",
+    "title": "HP Pavilion 15",
+    "description": "Laptop con pantalla Full HD, almacenamiento SSD y diseño moderno para estudiar, trabajar y disfrutar contenido multimedia.",
+    "price": 1100000,
+    "category": "laptops",
+    "stock": 9,
+    "pictureUrl": "/img/HP Pavilion 15.webp"
+  },
+  {
+    "id": "9",
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares inalámbricos con cancelación activa de ruido, audio detallado y gran comodidad para uso prolongado.",
+    "price": 620000,
+    "category": "audio",
+    "stock": 16,
+    "pictureUrl": "/img/Auriculares Sony WH-1000XM5.webp"
+  },
+  {
+    "id": "10",
+    "title": "Apple AirPods Pro 2",
+    "description": "Auriculares compactos con audio espacial, cancelación de ruido adaptativa y estuche de carga inalámbrica.",
+    "price": 490000,
+    "category": "audio",
+    "stock": 20,
+    "pictureUrl": "/img/Apple AirPods Pro 2.webp"
+  },
+  {
+    "id": "11",
+    "title": "JBL Charge 5",
+    "description": "Parlante Bluetooth portátil con sonido potente, graves definidos y resistencia al agua para llevar a cualquier lugar.",
+    "price": 260000,
+    "category": "audio",
+    "stock": 15,
+    "pictureUrl": "/img/JBL Charge 5.webp"
+  },
+  {
+    "id": "12",
+    "title": "Soundcore Liberty 4 NC",
+    "description": "Auriculares true wireless con cancelación de ruido, autonomía extendida y micrófonos para llamadas más claras.",
+    "price": 175000,
+    "category": "audio",
+    "stock": 22,
+    "pictureUrl": "/img/Soundcore Liberty 4 NC.webp"
+  },
+  {
+    "id": "13",
+    "title": "Apple Watch Series 9",
+    "description": "Smartwatch con pantalla brillante, seguimiento de actividad, medición de frecuencia cardíaca y conectividad avanzada.",
+    "price": 780000,
+    "category": "smartwatches",
+    "stock": 8,
+    "pictureUrl": "/img/Apple Watch Series 9.webp"
+  },
+  {
+    "id": "14",
+    "title": "Samsung Galaxy Watch6",
+    "description": "Reloj inteligente con monitoreo de salud, entrenamiento personalizado y diseño elegante para todos los días.",
+    "price": 430000,
+    "category": "smartwatches",
+    "stock": 13,
+    "pictureUrl": "/img/Samsung Galaxy Watch6.webp"
+  },
+  {
+    "id": "15",
+    "title": "Xiaomi Watch S3",
+    "description": "Smartwatch con pantalla AMOLED, múltiples modos deportivos, GPS y batería de larga duración.",
+    "price": 210000,
+    "category": "smartwatches",
+    "stock": 17,
+    "pictureUrl": "/img/Xiaomi Watch S3.webp"
+  },
+  {
+    "id": "16",
+    "title": "Garmin Forerunner 165",
+    "description": "Reloj deportivo con GPS integrado, métricas de entrenamiento y seguimiento preciso para running y actividad física.",
+    "price": 510000,
+    "category": "smartwatches",
+    "stock": 10,
+    "pictureUrl": "/img/Garmin Forerunner 165.webp"
+  },
+  {
+    "id": "17",
+    "title": "Monitor LG UltraGear 27 pulgadas",
+    "description": "Monitor gamer QHD con alta tasa de refresco, baja latencia y colores intensos para juegos competitivos.",
+    "price": 690000,
+    "category": "monitores",
+    "stock": 9,
+    "pictureUrl": "/img/Monitor LG UltraGear 27 pulgadas.webp"
+  },
+  {
+    "id": "18",
+    "title": "Monitor Samsung Smart M8 32 pulgadas",
+    "description": "Monitor 4K con diseño minimalista, funciones inteligentes y gran espacio visual para productividad y entretenimiento.",
+    "price": 890000,
+    "category": "monitores",
+    "stock": 6,
+    "pictureUrl": "/img/Monitor Samsung Smart M8 32 pulgadas.webp"
+  },
+  {
+    "id": "19",
+    "title": "Monitor Dell P2422H 24 pulgadas",
+    "description": "Monitor Full HD con panel IPS, marco delgado y ergonomía ajustable para espacios de trabajo cómodos.",
+    "price": 390000,
+    "category": "monitores",
+    "stock": 14,
+    "pictureUrl": "/img/Monitor Dell P2422H 24 pulgadas.webp"
+  },
+  {
+    "id": "20",
+    "title": "Monitor ASUS ProArt 27 pulgadas",
+    "description": "Pantalla profesional con alta precisión de color, resolución 4K y conectividad completa para diseño y edición.",
+    "price": 1020000,
+    "category": "monitores",
+    "stock": 5,
+    "pictureUrl": "/img/Monitor ASUS ProArt 27 pulgadas.webp"
+  },
+  {
+    "id": "21",
+    "title": "Teclado Mecánico Logitech G Pro X",
+    "description": "Teclado mecánico compacto con iluminación RGB, switches precisos y diseño preparado para gaming competitivo.",
+    "price": 280000,
+    "category": "accesorios",
+    "stock": 18,
+    "pictureUrl": "/img/Teclado Mecánico Logitech G Pro X.webp"
+  },
+  {
+    "id": "22",
+    "title": "Mouse Logitech MX Master 3S",
+    "description": "Mouse ergonómico inalámbrico con desplazamiento ultrarrápido, sensor preciso y conectividad para varios dispositivos.",
+    "price": 210000,
+    "category": "accesorios",
+    "stock": 20,
+    "pictureUrl": "/img/Mouse Logitech MX Master 3S.webp"
+  },
+  {
+    "id": "23",
+    "title": "Hub USB-C 7 en 1",
+    "description": "Adaptador multipuerto con HDMI, USB, lector de tarjetas y carga Power Delivery para ampliar tu notebook.",
+    "price": 95000,
+    "category": "accesorios",
+    "stock": 25,
+    "pictureUrl": "/img/Hub USB-C 7 en 1.webp"
+  },
+  {
+    "id": "24",
+    "title": "Webcam Logitech Brio 500",
+    "description": "Webcam Full HD con corrección automática de iluminación y micrófono integrado para videollamadas profesionales.",
+    "price": 190000,
+    "category": "accesorios",
+    "stock": 12,
+    "pictureUrl": "/img/Webcam Logitech Brio 500.webp"
+  },
+  {
+    "id": "25",
+    "title": "Cargador GaN 65W USB-C",
+    "description": "Cargador compacto de carga rápida compatible con notebooks, celulares y tablets mediante tecnología GaN.",
+    "price": 78000,
+    "category": "accesorios",
+    "stock": 30,
+    "pictureUrl": "/img/Cargador GaN 65W USB-C.webp"
+  },
+  {
+    "id": "26",
+    "title": "SSD Externo Samsung T7 1TB",
+    "description": "Unidad SSD portátil de alta velocidad con 1 TB de capacidad, ideal para respaldos y archivos pesados.",
+    "price": 245000,
+    "category": "accesorios",
+    "stock": 16,
+    "pictureUrl": "/img/SSD Externo Samsung T7 1TB.webp"
+  },
+  {
+    "id": "27",
+    "title": "Base Refrigerante para Notebook",
+    "description": "Base con ventiladores silenciosos y altura regulable para mejorar la ventilación y ergonomía de tu laptop.",
+    "price": 65000,
+    "category": "accesorios",
+    "stock": 19,
+    "pictureUrl": "/img/Base Refrigerante para Notebook.webp"
+  },
+  {
+    "id": "28",
+    "title": "Nintendo Switch OLED",
+    "description": "Consola híbrida con pantalla OLED de 7 pulgadas, modo portátil y dock para jugar también en televisión.",
+    "price": 750000,
+    "category": "accesorios",
+    "stock": 8,
+    "pictureUrl": "/img/Nintendo Switch OLED.webp"
+  },
+  {
+    "id": "29",
+    "title": "PlayStation 5 DualSense",
+    "description": "Control inalámbrico con respuesta háptica y gatillos adaptativos para una experiencia de juego más inmersiva.",
+    "price": 160000,
+    "category": "accesorios",
+    "stock": 15,
+    "pictureUrl": "/img/PlayStation 5 DualSense.webp"
+  },
+  {
+    "id": "30",
+    "title": "Anker PowerCore 20000mAh",
+    "description": "Batería externa de gran capacidad con carga rápida y puertos múltiples para mantener tus dispositivos siempre activos.",
+    "price": 115000,
+    "category": "accesorios",
+    "stock": 21,
+    "pictureUrl": "/img/Anker PowerCore 20000mAh.webp"
+  }
+]

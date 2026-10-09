@@ -1,0 +1,44 @@
+footer {
+  margin-top: 4rem;
+
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+
+  padding: 1.5rem 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer p {
+  color: var(--text-secondary);
+}
+
+footer .nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  font-size: 2.2rem;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+/* Logo de WhatsApp */
+footer li:first-child {
+  color: #25d366;
+}
+
+/* Logo de Instagram */
+footer li:last-child {
+  color: #e1306c;
+}
+
+footer li:hover {
+  color: var(--primary);
+}
