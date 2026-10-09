@@ -4,7 +4,7 @@ import "./Footer.css";
 export const Footer = () => {
   return (
     <footer>
-      <p>© 2026 Mi Tienda. Todos los derechos reservados.</p>
+      <p>© 2026 TecnoImport Boedo. Todos los derechos reservados.</p>
 
       <nav aria-label="Redes sociales">
         <ul className="nav-list">
