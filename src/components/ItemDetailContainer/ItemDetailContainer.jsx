@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { getProductById } from "../../services/productsService";
 
 export const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -14,29 +15,35 @@ export const ItemDetailContainer = () => {
     setLoading(true);
     setError(null);
 
-    fetch("/data/products.json")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Error al cargar el producto.");
-        }
+    //   fetch("/data/products.json")
+    //     .then((res) => {
+    //       if (!res.ok) {
+    //         throw new Error("Error al cargar el producto.");
+    //       }
 
-        return res.json();
-      })
-      .then((data) => {
-        const item = data.find((product) => product.id === id);
+    //       return res.json();
+    //     })
+    //     .then((data) => {
+    //       const item = data.find((product) => product.id === id);
 
-        if (!item) {
-          throw new Error("Producto no encontrado.");
-        }
+    //       if (!item) {
+    //         throw new Error("Producto no encontrado.");
+    //       }
 
-        setItemDetail(item);
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    //       setItemDetail(item);
+    //     })
+    //     .catch((error) => {
+    //       setError(error.message);
+    //     })
+    //     .finally(() => {
+    //       setLoading(false);
+    //     });
+    // }, [id]);
+
+    getProductById(id)
+      .then((data) => setItemDetail(data))
+      .catch((error) => setError(error.message))
+      .finally(() => setLoading(false));
   }, [id]);
 
   if (loading) return <p>Cargando detalle del producto...</p>;
