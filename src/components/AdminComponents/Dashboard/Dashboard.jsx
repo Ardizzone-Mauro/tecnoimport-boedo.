@@ -1,46 +1,47 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Dashboard.css";
+
 import { useAuth } from "../../../context/AuthContext";
+
+import { ProductsListContainer } from "../ProductsListContainer/ProductsListContainer";
 
 export const Dashboard = () => {
   const { logout } = useAuth();
 
   return (
     <div className="dashboard">
+      {/* ENCABEZADO */}
       <header className="dashboard-header">
-        <h2>Panel de administración</h2>
+        <div>
+          <h2>Panel de administración</h2>
+          <p>Gestioná los productos de TecnoImport Boedo</p>
+        </div>
 
         <div className="header-actions">
           <Link className="btn btn-secondary" to="/">
             Volver a la tienda
           </Link>
+
           <button className="btn bg-delete primary" onClick={logout}>
             Cerrar sesión
           </button>
         </div>
       </header>
 
+      {/* ACCIONES RÁPIDAS */}
       <section className="dashboard-actions">
-        <h3>Acciones rápidas</h3>
+        <div className="dashboard-section-header">
+          <h3>Gestión de productos</h3>
 
-        <div className="actions-grid">
-          <Link to="/admin/products/new" className="action-card">
-            ➕ Cargar
-          </Link>
-
-          <Link to="#" className="action-card disabled">
-            ✏️ Modificar
-          </Link>
-
-          <Link to="#" className="action-card disabled">
-            🗑️ Eliminar
+          <Link to="/admin/products/new" className="dashboard-add-btn">
+            + Agregar producto
           </Link>
         </div>
       </section>
 
-      <section className="dashboard-help">
-        <h3>Ayuda</h3>
-        <p>Desde este panel podés gestionar los productos de la tienda.</p>
+      {/* LISTADO DE PRODUCTOS */}
+      <section className="dashboard-products">
+        <ProductsListContainer showHeader={false} />
       </section>
     </div>
   );

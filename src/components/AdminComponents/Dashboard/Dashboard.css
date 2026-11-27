@@ -1,3 +1,5 @@
+/* ========== DASHBOARD ========== */
+
 .dashboard {
   max-width: 950px;
   margin: 2rem auto;
@@ -10,12 +12,13 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* ---------- HEADER ---------- */
+/* ========== HEADER ========== */
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 
   padding-bottom: 1.5rem;
   margin-bottom: 2rem;
@@ -30,10 +33,11 @@
 
 .header-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* ---------- ACCIONES ---------- */
+/* ========== ACCIONES ========== */
 
 .dashboard-actions {
   margin-bottom: 2rem;
@@ -46,34 +50,75 @@
 }
 
 .actions-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
-.action-card {
-  flex: 1;
+/* Estilo general para las 3 tarjetas */
 
+.action-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 130px;
   padding: 1.5rem;
 
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
 
+  color: var(--text);
   text-align: center;
+  text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
 
-  transition: 0.25s;
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .action-card:hover:not(.disabled) {
-  transform: translateY(-3px);
-
-  border-color: var(--primary);
-
-  background: var(--primary);
+  transform: translateY(-4px);
   color: white;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
+
+/* AGREGAR - VERDE */
+
+.action-card.add:hover {
+  background: #198754;
+  border-color: #198754;
+}
+
+/* EDITAR - AZUL */
+
+.action-card.edit:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* ELIMINAR - ROJO */
+
+.action-card.delete:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+/* Accesibilidad con teclado */
+
+.action-card:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* Deshabilitado */
 
 .action-card.disabled {
   opacity: 0.45;
@@ -81,7 +126,7 @@
   pointer-events: none;
 }
 
-/* ---------- AYUDA ---------- */
+/* ========== AYUDA ========== */
 
 .dashboard-help {
   padding: 1.5rem;
@@ -96,7 +141,7 @@
   line-height: 1.6;
 }
 
-/* ---------- BOTONES ---------- */
+/* ========== BOTONES ========== */
 
 .header-actions .btn:last-child:hover {
   filter: brightness(0.9);
@@ -106,11 +151,182 @@
   background: transparent;
   border: 1px solid var(--border);
   color: var(--text);
-
   transition: 0.25s;
 }
 
 .btn-secondary:hover {
   background: var(--card);
   border-color: var(--primary);
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablets */
+
+@media (max-width: 768px) {
+  .dashboard {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Celulares */
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .action-card {
+    min-height: 90px;
+    padding: 1rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ========== DASHBOARD CON PRODUCTOS ========== */
+
+.dashboard {
+  max-width: 1250px;
+  width: 95%;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* ENCABEZADO */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.dashboard-header p {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* GESTIÓN DE PRODUCTOS */
+
+.dashboard-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-section-header h3 {
+  margin: 0;
+}
+
+/* BOTÓN AGREGAR */
+
+.dashboard-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.85rem 1.5rem;
+
+  background: #198754;
+  color: white;
+  border-radius: 10px;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.dashboard-add-btn:hover {
+  background: #157347;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* CONTENEDOR DE PRODUCTOS */
+
+.dashboard-products {
+  margin-top: 1.5rem;
+}
+
+/* ADAPTAR EL LISTADO EXISTENTE */
+
+.dashboard-products .admin-products {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 1.5rem;
+
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.dashboard-products .admin-table-wrapper {
+  width: 100%;
+}
+
+/* EFECTOS SOBRE LOS PRODUCTOS */
+
+.dashboard-products .admin-products-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.dashboard-products .admin-products-table tbody tr:hover {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .dashboard {
+    width: calc(100% - 1.5rem);
+    padding: 1.25rem;
+  }
+
+  .dashboard-section-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dashboard-add-btn {
+    width: 100%;
+  }
+
+  .dashboard-products .admin-products {
+    padding: 1rem;
+  }
 }

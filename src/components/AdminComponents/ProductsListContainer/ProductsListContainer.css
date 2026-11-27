@@ -1,0 +1,285 @@
+/* ========== CONTENEDOR PRINCIPAL ========== */
+
+.admin-products {
+  width: min(1200px, 95%);
+  margin: 2rem auto;
+  padding: 2rem;
+
+  background: var(--surface, #374151);
+  color: var(--text, #f9fafb);
+  border: 1px solid var(--border, #4b5563);
+  border-radius: 16px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ========== ENCABEZADO ========== */
+
+.admin-products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+
+  border-bottom: 1px solid var(--border, #4b5563);
+}
+
+.admin-products-header h1 {
+  margin: 0;
+  color: var(--text, #f9fafb);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+}
+
+/* ========== BOTÓN AGREGAR ========== */
+
+.admin-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.85rem 1.2rem;
+
+  background: #198754;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 9px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.admin-add-btn:hover {
+  background: #157347;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ========== TABLA ========== */
+
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border, #4b5563);
+  border-radius: 12px;
+}
+
+.admin-products-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.admin-products-table thead {
+  background: #253246;
+}
+
+.admin-products-table th {
+  padding: 1rem;
+  text-align: left;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-products-table td {
+  padding: 1rem;
+  color: var(--text, #f9fafb);
+  font-size: 0.95rem;
+  vertical-align: middle;
+
+  border-top: 1px solid var(--border, #4b5563);
+}
+
+.admin-products-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.admin-products-table tbody tr:hover {
+  background: rgba(148, 163, 184, 0.1);
+}
+
+/* ========== COLUMNAS ========== */
+
+.admin-product-name {
+  min-width: 210px;
+  font-weight: 600;
+}
+
+.admin-product-price {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.admin-product-stock {
+  text-align: center;
+}
+
+.admin-products-table th.stock-heading {
+  text-align: center;
+}
+
+.admin-product-category {
+  text-transform: capitalize;
+}
+
+/* ========== BOTONES DE ACCIÓN ========== */
+
+.admin-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.admin-edit-btn,
+.admin-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.55rem 0.9rem;
+  min-width: 85px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.admin-edit-btn {
+  background: #2563eb;
+}
+
+.admin-edit-btn:hover {
+  background: #1d4ed8;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.admin-delete-btn {
+  background: #dc3545;
+}
+
+.admin-delete-btn:hover:not(:disabled) {
+  background: #b02a37;
+  transform: translateY(-2px);
+}
+
+.admin-delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-add-btn:focus-visible,
+.admin-edit-btn:focus-visible,
+.admin-delete-btn:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* ========== ESTADOS ========== */
+
+.admin-products-message {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary, #cbd5e1);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .admin-products {
+    width: calc(100% - 1.5rem);
+    margin: 1rem auto;
+    padding: 1.25rem;
+  }
+
+  .admin-products-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-add-btn {
+    width: 100%;
+  }
+
+  .admin-products-table th,
+  .admin-products-table td {
+    padding: 0.8rem;
+  }
+}
+
+/* IMÁGENES DEL LISTADO */
+
+/* COLUMNA DE IMAGEN */
+.admin-product-image {
+  width: 125px;
+  text-align: center;
+}
+
+/* MINIATURA DEL PRODUCTO */
+.admin-product-thumbnail {
+  display: block;
+
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+
+  padding: 0.4rem;
+  margin: 0 auto;
+
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  transition: transform 0.25s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.admin-product-thumbnail:hover {
+  transform: scale(1.12);
+}
+
+/* CUANDO NO HAY IMAGEN */
+.admin-no-image {
+  width: 100px;
+  min-height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 0.5rem;
+
+  background: var(--card);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  text-align: center;
+}
