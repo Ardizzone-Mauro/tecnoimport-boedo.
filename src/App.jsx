@@ -6,7 +6,7 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { CartView } from "./components/Cart/CartView";
 
 import { ProductFormContainer } from "./components/AdminComponents/productForm/ProductFormContainer";
-import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
+import { ProductSuccess } from "./components/AdminComponents/ProductSuccess";
 import { Dashboard } from "./components/AdminComponents/Dashboard/Dashboard";
 import { ProductsListContainer } from "./components/AdminComponents/ProductsListContainer/ProductsListContainer";
 
