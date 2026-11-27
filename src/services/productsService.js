@@ -1,10 +1,11 @@
-//aca vamos a separar los servicios
-
 import {
+  addDoc,
   collection,
-  getDocs,
   doc,
+  updateDoc,
+  deleteDoc,
   getDoc,
+  getDocs,
   query,
   where,
 } from "firebase/firestore";
@@ -67,7 +68,6 @@ export const getProductById = async (id) => {
 /* -------------------------------------------------------------------------- */
 export const getByCategory = async (category) => {
   try {
-    console.log("Categoría recibida:", category);
     let queryRef;
 
     //truthy
@@ -103,4 +103,24 @@ export const createProduct = async (productData) => {
     console.error("Error al crear producto:", error);
     throw error;
   }
+};
+
+/* -------------------------------------------------------------------------- */
+/*                              EDITAR UN PRODUCTO                            */
+/* -------------------------------------------------------------------------- */
+export const updateProduct = async (id, productData) => {
+  const productRef = doc(db, "products", id);
+
+  await updateDoc(productRef, productData);
+
+  return id;
+};
+
+/* -------------------------------------------------------------------------- */
+/*                              ELIMINAR UN PRODUCTO                          */
+/* -------------------------------------------------------------------------- */
+export const deleteProduct = async (id) => {
+  const productRef = doc(db, "products", id);
+
+  await deleteDoc(productRef);
 };

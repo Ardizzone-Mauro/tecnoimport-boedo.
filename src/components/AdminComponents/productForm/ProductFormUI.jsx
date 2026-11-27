@@ -5,12 +5,16 @@ export const ProductFormUI = ({
   onChange,
   onFileChange,
   onSubmit,
+  isEditing = false,
+  currentImage = "",
+  previewImage = "",
 }) => {
   return (
     <section>
       <form className="product-form" onSubmit={onSubmit}>
-        <h2>Agregar nuevo producto</h2>
+        <h2>{isEditing ? "Editar producto" : "Agregar nuevo producto"}</h2>
 
+        {/* NOMBRE */}
         <div>
           <label>Nombre:</label>
           <input
@@ -21,6 +25,8 @@ export const ProductFormUI = ({
           />
           {errors.name && <p className="error">{errors.name}</p>}
         </div>
+
+        {/* PRECIO */}
         <div>
           <label>Precio:</label>
           <input
@@ -33,6 +39,21 @@ export const ProductFormUI = ({
           {errors.price && <p className="error">{errors.price}</p>}
         </div>
 
+        {/* STOCK */}
+        <div>
+          <label>Stock:</label>
+          <input
+            type="number"
+            name="stock"
+            value={product.stock}
+            onChange={onChange}
+            min="0"
+            step="1"
+          />
+          {errors.stock && <p className="error">{errors.stock}</p>}
+        </div>
+
+        {/* CATEGORIA */}
         <div>
           <label>Categoría:</label>
           <input
@@ -44,6 +65,7 @@ export const ProductFormUI = ({
           {errors.category && <p className="error">{errors.category}</p>}
         </div>
 
+        {/* DESCRIPCION */}
         <div>
           <label>Descripción:</label>
           <textarea
@@ -54,14 +76,41 @@ export const ProductFormUI = ({
           {errors.description && <p className="error">{errors.description}</p>}
         </div>
 
-        <div>
-          <label>Imagen:</label>
+        {/* IMAGEN */}
+        <div className="form-image-section">
+          <label>
+            {isEditing ? "Cambiar imagen:" : "Imagen del producto:"}
+          </label>
+
+          {/* Imagen seleccionada o imagen existente */}
+          {(previewImage || currentImage) && (
+            <div className="image-preview">
+              <p>
+                {previewImage
+                  ? "Vista previa de la imagen seleccionada:"
+                  : "Imagen actual:"}
+              </p>
+
+              <img
+                src={previewImage || currentImage}
+                alt={`Vista previa de ${product.name}`}
+                className="preview-img"
+              />
+            </div>
+          )}
+
           <input type="file" accept="image/*" onChange={onFileChange} />
+
           {errors.file && <p className="error">{errors.file}</p>}
         </div>
 
+        {/* BOTON GUARDAR */}
         <button className="btn bg-primary" type="submit" disabled={loading}>
-          {loading ? "Guardando..." : "Guardar"}
+          {loading
+            ? "Guardando..."
+            : isEditing
+              ? "Guardar cambios"
+              : "Agregar producto"}
         </button>
 
         {errors.general && <p className="error">{errors.general}</p>}
