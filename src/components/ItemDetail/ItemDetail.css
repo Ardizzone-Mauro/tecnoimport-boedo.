@@ -1,11 +1,4 @@
-.detail-wrapper {
-  max-width: 20rem;
-  margin: auto;
-}
-
-.detail-wrapper .card p:first-of-type {
-  display: block;
-  overflow: visible;
-  line-clamp: unset;
-  -webkit-box-orient: initial;
-}
+.detail-wrapper {max-width:500px; margin:1rem auto 3rem;}
+.detail-wrapper .card img {height:360px; padding:26px;}
+.detail-wrapper .card p:first-of-type {display:block; overflow:visible; -webkit-line-clamp:unset; line-clamp:unset; -webkit-box-orient:initial;}
+@media(max-width:600px){.detail-wrapper .card img{height:280px;}}
