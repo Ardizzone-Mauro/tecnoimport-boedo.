@@ -9,7 +9,7 @@
   border: 1px solid var(--border);
   border-radius: 14px;
 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(20, 34, 56, 0.07);
 }
 
 /* ========== HEADER ========== */
@@ -87,7 +87,7 @@
 .action-card:hover:not(.disabled) {
   transform: translateY(-4px);
   color: white;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 18px rgba(20, 34, 56, 0.09);
 }
 
 /* AGREGAR - VERDE */
@@ -329,4 +329,38 @@
   .dashboard-products .admin-products {
     padding: 1rem;
   }
+}
+
+.dashboard-products .admin-products {
+  border: 1px solid var(--border);
+}
+.dashboard-products .admin-products-table tbody tr:hover {
+  background: #edf4ff;
+}
+.dashboard-add-btn {
+  background: var(--primary);
+}
+.dashboard-add-btn:hover {
+  background: var(--primary-hover);
+}
+
+.dashboard .dashboard-header {
+  background: transparent;
+  border-top: 0;
+}
+
+/* BOTÓN AGREGAR PRODUCTO - VERDE */
+
+.dashboard-add-btn {
+  background-color: #198754;
+  color: #ffffff;
+  border: 1px solid #198754;
+  transition: all 0.25s ease;
+}
+
+.dashboard-add-btn:hover {
+  background-color: #157347;
+  border-color: #146c43;
+  color: #ffffff;
+  transform: translateY(-2px);
 }

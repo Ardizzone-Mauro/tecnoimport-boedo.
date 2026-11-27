@@ -5,12 +5,12 @@
   margin: 2rem auto;
   padding: 2rem;
 
-  background: var(--surface, #374151);
-  color: var(--text, #f9fafb);
-  border: 1px solid var(--border, #4b5563);
+  background: var(--surface, #ffffff);
+  color: var(--text, #142238);
+  border: 1px solid var(--border, #e3e9f2);
   border-radius: 16px;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 30px rgba(20, 34, 56, 0.09);
 }
 
 /* ========== ENCABEZADO ========== */
@@ -25,12 +25,12 @@
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
 
-  border-bottom: 1px solid var(--border, #4b5563);
+  border-bottom: 1px solid var(--border, #e3e9f2);
 }
 
 .admin-products-header h1 {
   margin: 0;
-  color: var(--text, #f9fafb);
+  color: var(--text, #142238);
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
 }
@@ -70,7 +70,7 @@
 .admin-table-wrapper {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid var(--border, #4b5563);
+  border: 1px solid var(--border, #e3e9f2);
   border-radius: 12px;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .admin-products-table thead {
-  background: #253246;
+  background: #eef3fa;
 }
 
 .admin-products-table th {
@@ -90,18 +90,18 @@
 
   font-size: 0.85rem;
   font-weight: 700;
-  color: #e5e7eb;
+  color: var(--text);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .admin-products-table td {
   padding: 1rem;
-  color: var(--text, #f9fafb);
+  color: var(--text, #142238);
   font-size: 0.95rem;
   vertical-align: middle;
 
-  border-top: 1px solid var(--border, #4b5563);
+  border-top: 1px solid var(--border, #e3e9f2);
 }
 
 .admin-products-table tbody tr {
@@ -204,7 +204,7 @@
 .admin-products-message {
   padding: 2rem;
   text-align: center;
-  color: var(--text-secondary, #cbd5e1);
+  color: var(--text-secondary, #64748b);
 }
 
 /* ========== RESPONSIVE ========== */
@@ -283,3 +283,7 @@
   font-size: 0.8rem;
   text-align: center;
 }
+
+.admin-products-table tbody tr:nth-child(even) { background: #f9fbfe; }
+.admin-products-table tbody tr:hover { background: #edf4ff; }
+.admin-product-thumbnail { box-shadow:0 2px 8px rgba(20,34,56,.06); }
